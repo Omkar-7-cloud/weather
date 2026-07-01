@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 35% 35%, #ffffff 0%, #dce8ff 25%, #90b4f0 55%, #2a4a9a 80%, #0d1a40 100%);
+    color: #111;
+}
+
+/* ── Home / Search page ── */
+.home-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 20px 80px;
+}
+
+.home-wrapper {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.home-logo {
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.home-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 0.5px;
+}
+
+.home-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-top: 6px;
+}
+
+.home-search-bar {
+    display: flex;
+    width: 100%;
+    border: 2px solid #d0d5dd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.home-search-bar:focus-within {
+    border-color: #4a90e2;
+    box-shadow: 0 2px 12px rgba(74,144,226,0.18);
+}
+
+.home-search-bar input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 16px 20px;
+    font-size: 17px;
+    color: #222;
+}
+
+.home-search-bar input::placeholder {
+    color: #aaa;
+}
+
+.home-search-bar button {
+    border: 0;
+    outline: 0;
+    background: #4a90e2;
+    color: #060606;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 28px;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 0.3px;
+}
+
+.home-search-bar button:hover {
+    background: #3578c8;
+}
+
+.error {
+    display: none;
+    width: 100%;
+    background: #fffdfd;
+    border: 1.5px solid #fcfcfc;
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-size: 15px;
+    color: #c0392b;
+}
+
+/* ── Weather result card ── */
+.weather-result {
+    display: none;
+    width: 100%;
+    background:
+        radial-gradient(ellipse at 55% 35%, #f7ecec 0%, #dce8ff 25%, #90b4f0 55%, #2a4a9a 80%, #0d1a40 100%);
+    border: 1.5px solid rgba(144, 180, 240, 0.4);
+    border-radius: 16px;
+    padding: 28px 28px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+
+.result-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.result-icon-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.weather-icon {
+    font-size: 64px;
+    line-height: 1;
+}
+
+.day-night-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.day-night-badge.day {
+    background: #fff8e1;
+    border: 1.5px solid #ffd54f;
+    color: #b8860b;
+}
+
+.day-night-badge.night {
+    background: #8291e4;
+    border: 1.5px solid #9fa8da;
+    color: #3949ab;
+}
+
+.day-night-icon {
+    font-size: 15px;
+}
+
+.result-info {
+    flex: 1;
+}
+
+.result-info .city {
+    font-size: 26px;
+    font-weight: 700;
+    color: #010101;
+}
+
+.condition {
+    font-size: 15px;
+    font-weight: 500;
+    color: #82a0ec;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 4px;
+}
+
+.timezone {
+    font-size: 13px;
+    color: #6a7b9c;
+    margin-top: 6px;
+}
+
+.result-temp {
+    text-align: right;
+}
+
+.temp {
+    font-size: 58px;
+    font-weight: 600;
+    color: #030303;
+    line-height: 1;
+}
+
+.result-details {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1.5px solid rgba(255,255,255,0.2);
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-item img {
+    width: 36px;
+    opacity: 0.75;
+}
+
+.detail-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.humidity, .wind {
+    font-size: 20px;
+    font-weight: 600;
+    color: #5a459e;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #0b0b0b;
+    margin-top: 2px;
+}
+
+
+

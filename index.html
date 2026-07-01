@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body">
+
+    <div class="home-wrapper">
+        <div class="home-header">
+            <div class="home-logo">⛅</div>
+            <h1 class="home-title">Weather Search</h1>
+            <p class="home-subtitle">Get current weather for any city in the world</p>
+        </div>
+
+        <div class="home-search-bar">
+            <input type="text" placeholder="Enter city name..." spellcheck="false" id="searchInput">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="error" id="errorDiv">
+            <p>City not found. Please try again.</p>
+        </div>
+
+        <div class="weather-result" id="weatherResult">
+            <div class="result-top">
+                <div class="result-icon-wrap">
+                    <span class="weather-icon"></span>
+                    <div class="day-night-badge">
+                        <span class="day-night-icon"></span>
+                        <span class="day-night-label"></span>
+                    </div>
+                </div>
+                <div class="result-info">
+                    <h2 class="city"></h2>
+                    <p class="condition"></p>
+                    <p class="timezone"></p>
+                </div>
+                <div class="result-temp">
+                    <span class="temp"></span>
+                </div>
+            </div>
+            <div class="result-details">
+                <div class="detail-item">
+                    <img src="humidity.png" alt="Humidity">
+                    <div>
+                        <span class="humidity"></span>
+                        <span class="detail-label">Humidity</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <img src="wind.png" alt="Wind">
+                    <div>
+                        <span class="wind"></span>
+                        <span class="detail-label">Wind Speed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="react.js"></script>
+</body>
+</html>
